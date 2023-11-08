@@ -10,6 +10,12 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. oh-my-zsh
 
+1. ocaml, haskell (maybe) ...
+
+1. Latex, python, anaconda, jupyter notebook (comes with anaconda ?? ) , texworks
+
+1. install npm, node, javacript, python
+
 1. neovim (with icon packs and themes)
 
 1. tmux and tmux config and tmux alias
