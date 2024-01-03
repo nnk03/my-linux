@@ -25,3 +25,5 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. install homebrew for linux
 
 1. if we want to use clipboard to use in vim [https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim](https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim)
+
+for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
