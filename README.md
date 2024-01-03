@@ -30,4 +30,4 @@ for hp ubuntu set clipboard unnamedplus kind of not working, hence select the li
 
 ## For Kali Linux
 
-1. only homebrew, vim, vimrc, gcc,
+1. only homebrew, vim, vimrc, gcc, vscode
