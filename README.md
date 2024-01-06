@@ -31,3 +31,7 @@ for hp ubuntu set clipboard unnamedplus kind of not working, hence select the li
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
+
+1. When installing vim and neovim, old versions were being installed. Had to go to the github page and then install from the package
+
+1. xclip was required to use system clipboard for neovim
