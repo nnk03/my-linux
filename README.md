@@ -26,6 +26,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. if we want to use clipboard to use in vim [https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim](https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim)
 
+1. [https://ubuntuhandbook.org/index.php/2022/06/touchpad-gestures-ubuntu-22-04-xorg/](https://ubuntuhandbook.org/index.php/2022/06/touchpad-gestures-ubuntu-22-04-xorg/) for
+   enabling touchpad gestures in ubuntu if not automatically enabled
+
 for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
 
 ## For Kali Linux
