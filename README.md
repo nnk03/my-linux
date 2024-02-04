@@ -29,6 +29,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. [https://ubuntuhandbook.org/index.php/2022/06/touchpad-gestures-ubuntu-22-04-xorg/](https://ubuntuhandbook.org/index.php/2022/06/touchpad-gestures-ubuntu-22-04-xorg/) for
    enabling touchpad gestures in ubuntu if not automatically enabled
 
+1. To install Latex,first follow this website [https://linuxhint.com/install-latex-ubuntu/](https://linuxhint.com/install-latex-ubuntu/) and then
+   the video [https://www.youtube.com/watch?v=4bE7UUE7d7w](https://www.youtube.com/watch?v=4bE7UUE7d7w) till 11:43
+
 for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
 
 ## For Kali Linux
