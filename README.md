@@ -32,6 +32,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. To install Latex,first follow this website [https://linuxhint.com/install-latex-ubuntu/](https://linuxhint.com/install-latex-ubuntu/) and then
    the video [https://www.youtube.com/watch?v=4bE7UUE7d7w](https://www.youtube.com/watch?v=4bE7UUE7d7w) till 11:43
 
+1. for nvim clipboard to work, install xclip
+
 for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
 
 ## For Kali Linux
