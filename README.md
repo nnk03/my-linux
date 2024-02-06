@@ -34,6 +34,11 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. for nvim clipboard to work, install xclip
 
+1. install vim and, and check 
+`vim --version | grep`
+
+if it shows `-clipboard`, then install 
+vim-gtk3 for enabling vim clipboard
 for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
 
 ## For Kali Linux
