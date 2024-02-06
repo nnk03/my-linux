@@ -1,7 +1,7 @@
 {
   "workbench.colorTheme": "Default High Contrast",
   "editor.fontSize": 18,
-  // "window.zoomLevel": 0.9, // toggle this line to change environment size
+  "window.zoomLevel": 0.9,
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -80,5 +80,6 @@
   "window.commandCenter": false,
   "editor.lineNumbers": "relative",
   "editor.accessibilitySupport": "off",
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "vim.useSystemClipboard": true // for using system clipboard with vim extension
 }
