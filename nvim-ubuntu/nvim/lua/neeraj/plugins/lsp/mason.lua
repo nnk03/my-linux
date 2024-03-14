@@ -45,6 +45,8 @@ return {
         "jsonls",
         "lua_ls",
         "rust_analyzer",
+        -- "ltex",
+        "texlab",
         -- "ocamllsp",
       },
       -- auto-install configured servers (with lspconfig)
