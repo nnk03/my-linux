@@ -117,6 +117,11 @@ return {
       on_attach = on_attach,
     })
 
+    lspconfig["texlab"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure graphql language server
     lspconfig["graphql"].setup({
       capabilities = capabilities,

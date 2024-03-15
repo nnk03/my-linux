@@ -60,6 +60,10 @@ vim.keymap.set(
   "<Esc>:! ocamlc %; ./a.out > output.txt<CR>",
   { desc = "compile and execute current ocaml code and write it to output.txt" }
 )
+
+-- for python code interpreting
+vim.keymap.set("n", "<leader>bp", "<Esc>:! python3 %; <CR>", { desc = "Interpret current python code" })
+
 -- set keymaps for toggle term
 -- vim.keymap.set("n", "<C-;>", "<cmd>ToggleTerm size=40 direction=float name=desktop<CR>", { desc = "Toggle term" })
 
