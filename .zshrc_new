@@ -93,8 +93,8 @@ source $ZSH/oh-my-zsh.sh
 unsetopt inc_append_history
 unsetopt share_history
 
-# to do fuzzy search ?
-zstyle ':completion:*' matcher-list 'r:|?=**'
+# to do fuzzy search, but will be case sensitive then
+# zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-       z}' 'r:|[._-]=* r:|=* l:|=*' 'r:|?=**'
 
 # User configuration
 
