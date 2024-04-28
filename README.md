@@ -2,6 +2,8 @@
 
 UBUNTU -> need to install fonts (mesloNerd and ...)
 
+1. necessary nvidia drivers
+
 1. copy .zshrc, aliases and config files
 
 1. vscode
