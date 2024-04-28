@@ -37,11 +37,13 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. install vim and, and check
    `vim --version | grep`
 
+   if it shows `-clipboard`, then install
+   vim-gtk3 for enabling vim clipboard
+   for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
+
 1. SmoothCursor.nvim can be installed if necessary
 
-if it shows `-clipboard`, then install
-vim-gtk3 for enabling vim clipboard
-for hp ubuntu set clipboard unnamedplus kind of not working, hence select the lines and then :w xclip -i -sel c
+1. Search Light extension
 
 ## For Kali Linux
 
