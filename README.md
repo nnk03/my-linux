@@ -47,6 +47,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. Search Light extension
 
+1. `eza` - Better `ls` and `zoxide` - Better `cd`
+   [https://www.josean.com/posts/how-to-setup-alacritty-terminal](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode

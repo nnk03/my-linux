@@ -16,6 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,17 +73,29 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search git-flow)
+plugins=(
+	git 
+	zsh-autosuggestions 
+	zsh-syntax-highlighting 
+	web-search 
+	virtualenv
+)
 
 source $ZSH/oh-my-zsh.sh
+
 # for separating history
 unsetopt inc_append_history
 unsetopt share_history
+
+
+# to do fuzzy search and ignore case ???
+# zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-       z}' 'r:|[._-]=* r:|=* l:|=*' 'r:|?=**'
 
 # User configuration
 
@@ -110,38 +123,32 @@ unsetopt share_history
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# adding nvim path 
-export PATH="/home/neeraj/nvim-linux64/bin/./:$PATH"
-
-alias tospl='cd $HOME/myexpos/spl'
-alias toxfs='cd $HOME/myexpos/xfs-interface'
-alias tosplprogs='cd $HOME/myexpos/spl/spl_progs'
-alias toxsm='cd $HOME/myexpos/xsm'
-alias toexpl='cd $HOME/myexpos/expl'
-alias toexplprogs='cd $HOME/myexpos/expl/expl_progs'
-alias tomyexpos='cd $HOME/myexpos'
-alias clr='clear -x'
-alias v='nvim'
-alias cf='g++ cf.cpp; ./a.out; cat output_file_check.txt'
-alias sp='systemctl suspend'
-
 bindkey '^ ' autosuggest-accept
-# bindkey '^[k' up-line-or-search
-# bindkey '^[j' down-line-or-search
 
-alias cato='cat output_file_check.txt'
 alias tmux='tmux -u'
-alias cal='ncal'
+alias v='nvim'
 
-# for going forward by one word, alt + F, and it autocompletes
-# for going backward by one word alt + B, and it does not autocomplete
+export PATH="/home/neeraj/nvim-linux64/bin/./:$PATH"
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/NuSMV-2.6.0-Linux/bin:$PATH
+export PATH=$HOME/squashfs-root/:$PATH
 
-eval $(opam env)
+alias AppRun=cursor
 
 
+# For anaconda python
+source /home/neeraj/anaconda3/bin/activate base
+conda deactivate
+
+# ---- Eza (better ls) -----
+alias ls="eza --icons=always"
+# ---- Zoxide (better cd) ----
+alias cd="z"
 
 
-
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(zoxide init zsh)"
