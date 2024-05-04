@@ -136,6 +136,10 @@ export PATH="/home/neeraj/nvim-linux64/bin/./:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/NuSMV-2.6.0-Linux/bin:$PATH
 export PATH=$HOME/squashfs-root/:$PATH
+# for rustup, (for alacritty)
+export PATH=$HOME/.cargo/bin/:$PATH
+# alacritty binary
+export PATH=$HOME/.alacritty/target/release/:$PATH
 
 alias AppRun=cursor
 

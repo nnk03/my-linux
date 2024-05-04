@@ -50,6 +50,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. `eza` - Better `ls` and `zoxide` - Better `cd`
    [https://www.josean.com/posts/how-to-setup-alacritty-terminal](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
 
+1. alacritty might be necessary for using sway, - [https://github.com/alacritty/alacritty/tree/master][https://github.com/alacritty/alacritty/tree/master]
+   installation of alacritty for ubuntu can be found in the above link,
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
