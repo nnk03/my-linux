@@ -1,4 +1,3 @@
-~/.config/sway/lock_screen.sh
 #!/bin/sh
 
 # Credit to the following for comming up with this:
@@ -15,4 +14,3 @@ swaylock -c 550000
 
 # Kills last background task so idle timer doesn't keep running
 kill %%
-
