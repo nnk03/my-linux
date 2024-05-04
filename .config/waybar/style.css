@@ -75,7 +75,7 @@ window#waybar {
 
 #workspaces button:hover {
   /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-  background: @background;
+  /* background: @background; */
   border-bottom: 1px solid #ffffff;
   box-shadow: inherit;
   color: #ffffff;
