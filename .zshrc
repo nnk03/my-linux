@@ -151,7 +151,7 @@ conda deactivate
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
-alias cd="z"
+# alias cd="z"		# better to use cd and z separately
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

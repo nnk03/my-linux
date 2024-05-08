@@ -14,6 +14,7 @@ return {
       treesitter.setup({ -- enable syntax highlighting
         highlight = {
           enable = true,
+          disable = { "latex" },
         },
         -- enable indentation
         indent = { enable = true },
@@ -40,10 +41,13 @@ return {
           "gitignore",
         },
         -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-        context_commentstring = {
-          enable = true,
-          enable_autocmd = false,
-        },
+        -- context_commentstring = {
+        --   enable = true,
+        --   enable_autocmd = false,
+        -- },
+        require("ts_context_commentstring").setup({}),
+        vim.g.skip_ts_contex,
+        t_commentstring_module = true,
         -- auto install above language parsers
         auto_install = true,
       })
