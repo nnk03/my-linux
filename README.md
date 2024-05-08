@@ -59,6 +59,10 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. postgres and pgAdmin
 
+1. TLA plus, NuSMV,
+
+1. docker
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
