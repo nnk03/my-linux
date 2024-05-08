@@ -53,7 +53,11 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. alacritty might be necessary for using sway, - [https://github.com/alacritty/alacritty/tree/master][https://github.com/alacritty/alacritty/tree/master]
    installation of alacritty for ubuntu can be found in the above link,
 
+1. rustup for alacritty and cargo ?
+
 1. [https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s](https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s)
+
+1. postgres and pgAdmin
 
 ## For Kali Linux
 
