@@ -50,6 +50,15 @@ bar {
     swaybar_command waybar
 }
 
+# identifier for volume can be found by running xmodmap -pke
+
+# enabling natural scrolling
+# 1267:12926:ELAN06FA:00_04F3:327E_Touchpad is the identifier of trackpad, different for different devices 
+# can be found by swaymsg -t get_inputs
+input 1267:12926:ELAN06FA:00_04F3:327E_Touchpad {
+	natural_scroll enabled
+}
+
 
 #====================================#
 # Keyboard Shortcuts (Sway-specific) #
@@ -59,6 +68,9 @@ set $mod Mod4
 
 # Set the ALT key to $alt (since Mod1 is harder to remember):
 set $alt Mod1
+
+# set the control to Mod2??
+set $ctrl Mod2
 
 # Set up a shortcut to reload this config file:
 bindsym $mod+Shift+c reload
@@ -136,9 +148,9 @@ bindsym $mod+r mode "resize"
 # Keyboard Shortcuts (Workspaces) #
 #=================================#
 # Switch to workspace
-set $ws1 "1 - Communication"
-set $ws2 "2 - Browsing"
-set $ws3 "3 - System Administration"
+set $ws1 "1 - Neeraj"
+set $ws2 "2 - Google"
+set $ws3 "3 - College"
 set $ws4 "4 - Learn Linux TV"
 set $ws5 "5 - Media"
 set $ws6 "6 - Writing"
