@@ -22,7 +22,7 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. tmux and tmux config and tmux alias
 
-1. install gnome-tweaks, gnome-shell-manager, gpaste-client, gitk, tig, neofetch
+1. install gnome-tweaks, gnome-shell-manager(gnome-shell-extension-manager ??), gpaste-client, gitk, tig, neofetch
 
 1. install homebrew for linux
 
