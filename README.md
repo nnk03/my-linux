@@ -70,3 +70,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. When installing vim and neovim, old versions were being installed. Had to go to the github page and then install from the package
 
 1. xclip was required to use system clipboard for neovim
+
+## For Arch Linux
+
+1. Check whichever is required, which are mentioned for Ubuntu
+
+1. Check out [https://www.youtube.com/watch?v=odgD_RdJjCU](https://www.youtube.com/watch?v=odgD_RdJjCU)
