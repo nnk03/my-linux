@@ -15,6 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
@@ -73,18 +74,17 @@ POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git 
-	zsh-autosuggestions 
-	zsh-syntax-highlighting 
-	web-search 
-	virtualenv
+    git 
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    web-search
+    virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,9 +93,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt inc_append_history
 unsetopt share_history
 
-
-# to do fuzzy search and ignore case ???
-# zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-       z}' 'r:|[._-]=* r:|=* l:|=*' 'r:|?=**'
 
 # User configuration
 
@@ -122,37 +119,38 @@ unsetopt share_history
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+#
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 bindkey '^ ' autosuggest-accept
 
 alias tmux='tmux -u'
 alias v='nvim'
 
-export PATH="/home/neeraj/nvim-linux64/bin/./:$PATH"
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/NuSMV-2.6.0-Linux/bin:$PATH
-export PATH=$HOME/squashfs-root/:$PATH
-# for rustup, (for alacritty)
-export PATH=$HOME/.cargo/bin/:$PATH
-# alacritty binary
-export PATH=$HOME/.alacritty/target/release/:$PATH
 
-alias AppRun=cursor
+export PATH="$HOME/nvim-linux64/bin/./:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/alacritty/target/release:$PATH"
 
-
-# For anaconda python
-source /home/neeraj/anaconda3/bin/activate base
-conda deactivate
 
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 # alias cd="z"		# better to use cd and z separately
 
+# source /home/neeraj/anaconda3/bin/activate base
+# conda deactivate
+
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# if zoxide is installed via homebrew, then this line should be after doing eval $(/home/linuxbrew/...so on)
 eval "$(zoxide init zsh)"
+
+export GTK_THEME=Adwaita:dark
+
+
+
