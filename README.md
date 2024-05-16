@@ -75,7 +75,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. Check whichever is required, which are mentioned for Ubuntu
 
-1. Check out [https://www.youtube.com/watch?v=odgD_RdJjCU](https://www.youtube.com/watch?v=odgD_RdJjCU)
+1. Check out [https://www.youtube.com/watch?v=odgD_RdJjCU](https://www.youtube.com/watch?v=odgD_RdJjCU) and
+   [https://www.youtube.com/watch?v=V7ABBlXcn0g](https://www.youtube.com/watch?v=V7ABBlXcn0g)
 
 ### For installing the whole OS in a pendrive
 
