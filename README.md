@@ -78,6 +78,16 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. Check out [https://www.youtube.com/watch?v=odgD_RdJjCU](https://www.youtube.com/watch?v=odgD_RdJjCU) and
    [https://www.youtube.com/watch?v=V7ABBlXcn0g](https://www.youtube.com/watch?v=V7ABBlXcn0g)
 
+1. tmux first line is not necessary ?
+
+
+
+
+
+
+
+   
+
 ### For installing the whole OS in a pendrive
 
 1. [https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s](https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s) For Ubuntu
@@ -85,3 +95,14 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. [https://www.youtube.com/watch?v=\_5vv3j-dW4o](https://www.youtube.com/watch?v=_5vv3j-dW4o) For Debian
 
 1. [https://www.youtube.com/watch?v=yYyh3PrIB7w](https://www.youtube.com/watch?v=yYyh3PrIB7w) For Arch
+
+
+
+
+
+
+
+
+
+
+
