@@ -80,6 +80,7 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. tmux first line is not necessary ?
 
+1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F` 
 
 
 
