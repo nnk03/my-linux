@@ -17,8 +17,7 @@
 # Appearance and Theming #
 #========================#
 # Declare Colors:
-# set $background #332b2b
-set $background #000000
+set $background #332b2b
 set $color_urgent #fb4934
 set $text_color #ffffff
 set $title_bg_unfocused #666666
@@ -51,15 +50,6 @@ bar {
     swaybar_command waybar
 }
 
-# identifier for volume can be found by running xmodmap -pke
-
-# enabling natural scrolling
-# 1267:12926:ELAN06FA:00_04F3:327E_Touchpad is the identifier of trackpad, different for different devices 
-# can be found by swaymsg -t get_inputs
-input 1267:12926:ELAN06FA:00_04F3:327E_Touchpad {
-	natural_scroll enabled
-}
-
 
 #====================================#
 # Keyboard Shortcuts (Sway-specific) #
@@ -70,9 +60,6 @@ set $mod Mod4
 # Set the ALT key to $alt (since Mod1 is harder to remember):
 set $alt Mod1
 
-# set the control to Mod2??
-set $ctrl Mod2
-
 # Set up a shortcut to reload this config file:
 bindsym $mod+Shift+c reload
 
@@ -80,12 +67,12 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 
 # Screen locking (automatic, with a timeout)
-set $lock swaylock -c 550000 -i $HOME/.config/sway/wallpaper.jpg 
+set $lock swaylock -c 550000
 exec swayidle -w \
     timeout 600 $lock \
     timeout 570 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
-    before-sleep $lock \
+    before-sleep $lock
 
 # Screen locking (manual)
 set $lock_screen exec bash ~/.config/sway/lock_screen.sh
@@ -149,9 +136,9 @@ bindsym $mod+r mode "resize"
 # Keyboard Shortcuts (Workspaces) #
 #=================================#
 # Switch to workspace
-set $ws1 "1 - Neeraj"
-set $ws2 "2 - Google"
-set $ws3 "3 - College"
+set $ws1 "1 - Communication"
+set $ws2 "2 - Browsing"
+set $ws3 "3 - System Administration"
 set $ws4 "4 - Learn Linux TV"
 set $ws5 "5 - Media"
 set $ws6 "6 - Writing"
@@ -243,16 +230,12 @@ bindsym XF86MonBrightnessUp exec light -A 10
 set $menu wofi --show drun  -i | xargs swaymsg exec --
 
 # Launch your browser:
-# bindsym $mod+shift+b exec firefox
-bindsym $mod+shift+b exec google-chrome --new-window
+bindsym $mod+shift+b exec firefox
 
 # Open a file manager:
-# bindsym ctrl+$mod+f exec pcmanfm
 bindsym ctrl+$mod+f exec pcmanfm
 
 # Open a terminal emulator:
-# set $term alacritty
-# set $term gnome-terminal
 set $term alacritty
 bindsym $mod+t exec $term
 
@@ -265,25 +248,8 @@ bindsym $mod+space exec $menu
 # Open the application launcher (alternate version):
 bindsym $mod+d exec $menu
 
-set $power_mode "power"
-bindsym $mod+Shift+Escape mode $power_mode
-mode $power_mode {
-    bindsym p         exec shutdown now
-    bindsym r         exec shutdown -r now
-    bindsym l         exec swaylock -i $HOME/.config/sway/wallpaper.jpg , mode "default"
-    bindsym q         exec --no-startup-id i3-msg exit, mode "default"
-    bindsym h         exec systemctl hibernate
-    #bindsym s        exec sudo  /lib/systemd/systemd-sleep hybrid-sleep 
-    bindsym s         exec systemctl suspend, mode "default"
-    bindsym Return    mode "default"
-    bindsym Escape    mode "default"
-}
-
 #======#
 # Misc #
 #======#
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
-
-
-

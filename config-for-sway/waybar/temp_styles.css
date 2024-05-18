@@ -4,20 +4,17 @@
     min-height: 0;
     padding-bottom: 2px;
     padding-top: 2px;
-	border-radius : 10px;
-	border-color: white;
-	color : #ffffff;
 }
 
 #battery {
     background: transparent;
-    color: yellow;
+    color: #ffffff;
     opacity: 0.7;
     padding: 2px 8px;
 }
 
 #battery.charging, #battery.plugged {
-    color: yellow;
+    color: #ffffff;
     padding: 2px 8px;
 }
 
@@ -35,13 +32,6 @@
     background: #1f1f1f;
     color: #ffffff;
     margin-right: 4px;
-    padding: 2px 8px;
-}
-
-#cpu, #memory, #temperature, #backlight {
-	background : transparent;
-    color: #ffffff;
-    opacity: 0.7;
     padding: 2px 8px;
 }
 
