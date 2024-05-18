@@ -1,4 +1,4 @@
-# Ansible managed message here
+# Anseble managed message here
 
 #==================================================================================#
 # Sway Window Manager Configuration File                                           #
@@ -261,7 +261,11 @@ set $menu wofi --show drun  -i | xargs swaymsg exec --
 # set $menu wofi --show run -Iib -l 5 -W 500 -x -10 -y -51
 
 # Launch your browser:
-bindsym $mod+shift+b exec google-chrome
+# bindsym $mod+shift+b exec google-chrome
+# to ask for profile each time new window opens
+bindsym $mod+shift+b exec firefox -P %u
+# chrome password manager not autofilling, for some reason
+# bindsym $mod+shift+b exec firefox-developer-edition -P %u
 
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
@@ -285,3 +289,4 @@ bindsym $mod+d exec $menu
 #======#
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets
