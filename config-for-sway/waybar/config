@@ -30,7 +30,7 @@
 
     // Configuration for individual modules
     "backlight": {
-        "format": "{percent}% {icon}",
+        "format": "{percent}%   {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
