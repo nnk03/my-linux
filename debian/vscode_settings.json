@@ -1,0 +1,86 @@
+{
+  "workbench.colorTheme": "Default High Contrast",
+  "editor.fontSize": 18,
+  "window.zoomLevel": 0.9,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.triggerExpansionOnTab": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "indentRainbow.includedLanguages": [],
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "left": {
+        "custom": {
+          "borderWidth": "0 0 0 3px",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "5px",
+          "overviewRulerColor": "white"
+        }
+      },
+      "right": {
+        "custom": {
+          "borderWidth": "0 3px 0 0",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "5px",
+          "overviewRulerColor": "white"
+        }
+      }
+    }
+  },
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.15)",
+    "rgba(127,255,127,0.15)",
+    "rgba(255,127,255,0.15)",
+    "rgba(79,236,236,0.15)"
+  ],
+  "editor.tabSize": 4,
+  "php.validate.executablePath": "/opt/homebrew/bin/php",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/dist/css",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "python.diagnostics.sourceMapsEnabled": true,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.tabSize": 4
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 4
+  },
+  "[json]": {
+    "editor.tabSize": 4
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  //   "python.formatting.autopep8Path": "",
+  //   "python.formatting.provider": "none",
+  // "python.formatting.provider": "black"
+  // "python.formatting.autopep8Path": ""
+  "prettier.tabWidth": 4,
+  "prettier.useTabs": true,
+  "latex-workshop.bibtex-format.tab": "4 spaces",
+  // "editor.detectIndentation": false,
+  // "files.associations": {
+  //   "*.json": "jsonc"
+  // },
+  "window.commandCenter": false,
+  "editor.lineNumbers": "relative",
+  "editor.accessibilitySupport": "off",
+  "git.openRepositoryInParentFolders": "never",
+  "vim.useSystemClipboard": true // for using system clipboard with vim extension
+}
