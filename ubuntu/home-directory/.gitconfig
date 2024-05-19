@@ -1,0 +1,7 @@
+[user]
+	email = neerajnjps03@gmail.com
+	name = Neeraj Krishna N
+[init]
+	defaultBranch = main
+[alias]
+	st = status

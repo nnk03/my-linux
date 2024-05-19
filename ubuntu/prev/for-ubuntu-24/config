@@ -1,0 +1,30 @@
+
+# Github
+Host github.com
+	HostName github.com
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/github/ed-loq-ubuntu
+
+# GitLab personal
+Host gitlab.com
+	HostName gitlab.com
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/gitlab-personal/ed-loq-ubuntu
+
+# BitBucket personal
+Host bitbucket.org
+	HostName bitbucket.org
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/bitbucket-personal/ed-loq-ubuntu
+
+# GitLab College
+Host college.gitlab.com
+	HostName gitlab.com
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/gitlab-college/ed-loq-ubuntu
+
+# BitBucket College
+Host college.bitbucket.org
+	HostName bitbucket.org
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/bitbucket-college/ed-loq-ubuntu
