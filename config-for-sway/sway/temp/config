@@ -1,4 +1,4 @@
-# Anseble managed message here
+# Ansible managed message here
 
 #==================================================================================#
 # Sway Window Manager Configuration File                                           #
@@ -17,7 +17,8 @@
 # Appearance and Theming #
 #========================#
 # Declare Colors:
-set $background #332b2b
+# set $background #332b2b
+set $background #000000
 set $color_urgent #fb4934
 set $text_color #ffffff
 set $title_bg_unfocused #666666
@@ -34,15 +35,12 @@ client.urgent           $color_urgent            $color_urgent       $color_urge
 # Add gaps in between all application windows:
 gaps inner 8
 gaps outer 3
-smart_gaps on
-# smart_borders on
-hide_edge_borders both
 
 # Configure the default border:
 default_border pixel 2
 
 # Set the Wallpaper:
-output * bg $HOME/.config/sway/ubuntu_wallpaper.png fill
+output * bg $HOME/.config/sway/wallpaper.jpg fill
 
 
 #====================================#
@@ -51,6 +49,15 @@ output * bg $HOME/.config/sway/ubuntu_wallpaper.png fill
 # Set the waybar command for the application launcher:
 bar {
     swaybar_command waybar
+}
+
+# identifier for volume can be found by running xmodmap -pke
+
+# enabling natural scrolling
+# 1267:12926:ELAN06FA:00_04F3:327E_Touchpad is the identifier of trackpad, different for different devices 
+# can be found by swaymsg -t get_inputs
+input 1267:12926:ELAN06FA:00_04F3:327E_Touchpad {
+	natural_scroll enabled
 }
 
 
@@ -63,6 +70,9 @@ set $mod Mod4
 # Set the ALT key to $alt (since Mod1 is harder to remember):
 set $alt Mod1
 
+# set the control to Mod2??
+set $ctrl Mod2
+
 # Set up a shortcut to reload this config file:
 bindsym $mod+Shift+c reload
 
@@ -70,18 +80,16 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 
 # Screen locking (automatic, with a timeout)
-set $lock swaylock -c 550000
-# exec swayidle -w \
-# 	before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
-# 	lock 'swaylock -i $HOME/.config/sway/wallpaper.png'  \
-#     timeout 600 $lock \
-#     timeout 570 'swaymsg "output * dpms off"' \
-#     resume 'swaymsg "output * dpms on"' \
-#     before-sleep $lock
+set $lock swaylock -c 550000 -i $HOME/.config/sway/wallpaper.jpg 
+exec swayidle -w \
+    timeout 600 $lock \
+    timeout 570 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep $lock \
 
 # Screen locking (manual)
-# set $lock_screen exec bash ~/.config/sway/lock_screen.sh
-# bindsym $mod+Escape exec $lock_screen
+set $lock_screen exec bash ~/.config/sway/lock_screen.sh
+bindsym $mod+Escape exec $lock_screen
 
 
 #========================================#
@@ -141,15 +149,15 @@ bindsym $mod+r mode "resize"
 # Keyboard Shortcuts (Workspaces) #
 #=================================#
 # Switch to workspace
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws1 "1 - Neeraj"
+set $ws2 "2 - Google"
+set $ws3 "3 - College"
+set $ws4 "4 - Learn Linux TV"
+set $ws5 "5 - Media"
+set $ws6 "6 - Writing"
+set $ws7 "7 - Homelab"
+set $ws8 "8 - Home Assistant"
+set $ws9 "9 - Unwind"
 
 # Move between workspaces
 bindsym $mod+1 workspace $ws1
@@ -214,21 +222,6 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
-# for shutting down and suspending the system
-set $power_mode "power"
-bindsym $mod+shift+escape      mode $power_mode
-mode $power_mode {
-    bindsym p         exec shutdown now
-    bindsym r         exec shutdown -r now
-    bindsym l         exec swaylock -i $HOME/.config/sway/wallpaper.png , mode "default"
-    bindsym q         exec --no-startup-id i3-msg exit, mode "default"
-    bindsym h         exec systemctl hibernate
-    #bindsym s        exec sudo  /lib/systemd/systemd-sleep hybrid-sleep 
-    # bindsym s         exec systemctl suspend, mode "default"
-    bindsym s         exec swaylock -i $HOME/.config/sway/wallpaper.png , mode "default"
-    bindsym return    mode "default"
-    bindsym escape    mode "default"
-}
 
 #===============================#
 # Keyboard Shortcuts (Hardware) #
@@ -239,18 +232,8 @@ bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; pk
 bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; pkill -RTMIN+8 waybar"
 
 # Brightness
-# bindsym XF86MonBrightnessDown exec light -U 10
-# bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessUp exec brightnessctl s +5%
-bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
-
-input "1267:12926:ELAN06FA:00_04F3:327E_Touchpad" {
-		tap enabled
-        natural_scroll enabled
-        pointer_accel 0.3
-        accel_profile adaptive
-        dwt enabled
-}
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec light -A 10
 
 
 #=============================================#
@@ -258,20 +241,18 @@ input "1267:12926:ELAN06FA:00_04F3:327E_Touchpad" {
 #=============================================#
 # Set up wofi to replace dmenu as the launcher of choice:
 set $menu wofi --show drun  -i | xargs swaymsg exec --
-# set $menu wofi --show run -Iib -l 5 -W 500 -x -10 -y -51
 
 # Launch your browser:
-# bindsym $mod+shift+b exec google-chrome
-# to ask for profile each time new window opens
-bindsym $mod+shift+b exec firefox -P %u
-# chrome password manager not autofilling, for some reason
-# bindsym $mod+shift+b exec firefox-developer-edition -P %u
+# bindsym $mod+shift+b exec firefox
+bindsym $mod+shift+b exec google-chrome --new-window
 
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
-bindsym ctrl+$mod+f exec nautilus
+bindsym ctrl+$mod+f exec pcmanfm
 
 # Open a terminal emulator:
+# set $term alacritty
+# set $term gnome-terminal
 set $term alacritty
 bindsym $mod+t exec $term
 
@@ -284,9 +265,25 @@ bindsym $mod+space exec $menu
 # Open the application launcher (alternate version):
 bindsym $mod+d exec $menu
 
+set $power_mode "power"
+bindsym $mod+Shift+Escape mode $power_mode
+mode $power_mode {
+    bindsym p         exec shutdown now
+    bindsym r         exec shutdown -r now
+    bindsym l         exec swaylock -i $HOME/.config/sway/wallpaper.jpg , mode "default"
+    bindsym q         exec --no-startup-id i3-msg exit, mode "default"
+    bindsym h         exec systemctl hibernate
+    #bindsym s        exec sudo  /lib/systemd/systemd-sleep hybrid-sleep 
+    bindsym s         exec systemctl suspend, mode "default"
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+
 #======#
 # Misc #
 #======#
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
-exec --no-startup-id gnome-keyring-daemon --start --components=secrets
+
+
+
