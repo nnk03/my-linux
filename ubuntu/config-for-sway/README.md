@@ -2,6 +2,12 @@
 
 1. brightnessctl, pavucontrol ?
 
+1. brightnessctl might not work without root privileges, so run the below command
+
+```
+sudo chmod u+s $(which brightnessctl)
+```
+
 # Needed packages for arch
 
 1. install pavucontrol, brightnessctl, gnome-keyring
