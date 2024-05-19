@@ -63,6 +63,12 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. docker
 
+1. for using clipboard in vim in sway session, install wl-clipboard using the below command
+
+```
+sudo apt install wl-clipboard
+```
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
@@ -80,14 +86,7 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. tmux first line is not necessary ?
 
-1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F` 
-
-
-
-
-
-
-   
+1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F`
 
 ### For installing the whole OS in a pendrive
 
@@ -96,14 +95,3 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. [https://www.youtube.com/watch?v=\_5vv3j-dW4o](https://www.youtube.com/watch?v=_5vv3j-dW4o) For Debian
 
 1. [https://www.youtube.com/watch?v=yYyh3PrIB7w](https://www.youtube.com/watch?v=yYyh3PrIB7w) For Arch
-
-
-
-
-
-
-
-
-
-
-
