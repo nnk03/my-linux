@@ -270,6 +270,7 @@ bindsym $mod+shift+b exec firefox -P %u
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
 bindsym ctrl+$mod+f exec nautilus
+bindsym ctrl+$mod+b exec blueman-manager
 
 # Open a terminal emulator:
 set $term alacritty

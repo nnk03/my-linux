@@ -26,7 +26,7 @@
     // Choose the order of the modules
     "modules-center": ["sway/workspaces"],
     "modules-left": ["custom/hostname", "sway/mode", "sway/scratchpad"],
-    "modules-right": [ "custom/audio","network","cpu","memory","temperature", "backlight", "battery","clock"],
+    "modules-right": [ "custom/audio", "bluetooth", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock"],
 
     // Configuration for individual modules
     "backlight": {

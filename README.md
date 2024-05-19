@@ -80,14 +80,12 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. tmux first line is not necessary ?
 
-1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F` 
+1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F`
 
+# For SWAY
 
-
-
-
-
-   
+1. [https://www.reddit.com/r/swaywm/comments/hmtdr9/how_do_you_guys_change_settings_in_sway/](https://www.reddit.com/r/swaywm/comments/hmtdr9/how_do_you_guys_change_settings_in_sway/)
+   info about how to change settings in sway
 
 ### For installing the whole OS in a pendrive
 
@@ -96,14 +94,3 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. [https://www.youtube.com/watch?v=\_5vv3j-dW4o](https://www.youtube.com/watch?v=_5vv3j-dW4o) For Debian
 
 1. [https://www.youtube.com/watch?v=yYyh3PrIB7w](https://www.youtube.com/watch?v=yYyh3PrIB7w) For Arch
-
-
-
-
-
-
-
-
-
-
-
