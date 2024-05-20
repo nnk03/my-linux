@@ -8,6 +8,12 @@
 sudo chmod u+s $(which brightnessctl)
 ```
 
+1. need the packages `grim` and `slurp` to take screenshots
+
+```
+sudo apt install grim slurp
+```
+
 # Needed packages for arch
 
 1. install pavucontrol, brightnessctl, gnome-keyring
