@@ -278,6 +278,7 @@ bindsym ctrl+$mod+b exec blueman-manager
 # Open a terminal emulator:
 set $term alacritty
 bindsym $mod+t exec $term
+bindsym $mod+Return exec $term
 
 # Kill focused window:
 bindsym $mod+Shift+q kill
