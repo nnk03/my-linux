@@ -72,7 +72,6 @@ bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 # Screen locking (automatic, with a timeout)
 set $lock swaylock -c 550000
 exec swayidle -w \
-	before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
 	lock 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png'  \
     timeout 600 $lock \
     timeout 570 'swaymsg "output * dpms off"' \
