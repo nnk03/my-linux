@@ -113,8 +113,8 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # for screenshot
-bindsym Print exec grim ~/Pictures/Screenshot/screenshot-$(date +'%Y-%m-%d-%H%M%S').png
-bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Pictures/Screenshot/screenshot-$(date +'%Y-%m-%d-%H%M%S').png
+bindsym Print exec grim ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d-%H%M%S').png
+bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d-%H%M%S').png
 
 # Hold the modifier key and hold the left/right mouse button
 # to drag or resize a window respectively. This isn't exclusive
