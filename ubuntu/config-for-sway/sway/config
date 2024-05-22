@@ -285,8 +285,9 @@ bindsym $mod+space exec $menu
 bindsym $mod+d exec $menu
 
 exec swayidle -w \
-	before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
-	lock 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.jpg' 
+	before-sleep 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png --debug'
+	# before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
+	# lock 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.jpg' 
 
 #======#
 # Misc #
