@@ -34,15 +34,15 @@ client.urgent           $color_urgent            $color_urgent       $color_urge
 # Add gaps in between all application windows:
 gaps inner 8
 gaps outer 3
-smart_gaps on
+# smart_gaps on
 # smart_borders on
-hide_edge_borders both
+# hide_edge_borders both
 
 # Configure the default border:
 default_border pixel 2
 
 # Set the Wallpaper:
-output * bg $HOME/.config/sway/arch_wallpaper.png fill
+output * bg $HOME/.config/sway/wallpaper.png fill
 
 
 #====================================#
@@ -69,19 +69,11 @@ bindsym $mod+Shift+c reload
 # Quit your current session and return to the log-in manager/tty:
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 
-# Screen locking (automatic, with a timeout)
-set $lock swaylock -c 550000
-# exec swayidle -w \
-# 	before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
-# 	lock 'swaylock -i $HOME/.config/sway/wallpaper.png'  \
-#     timeout 600 $lock \
-#     timeout 570 'swaymsg "output * dpms off"' \
-#     resume 'swaymsg "output * dpms on"' \
-#     before-sleep $lock
 
 # Screen locking (manual)
-# set $lock_screen exec bash ~/.config/sway/lock_screen.sh
-# bindsym $mod+Escape exec $lock_screen
+set $lock_screen exec bash ~/.config/sway/lock_screen.sh
+# bindsym $mod+Escape $lock_screen
+bindsym Ctrl+Alt+q $lock_screen
 
 
 #========================================#
@@ -92,6 +84,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 
 # Move focus to another window ("cult of vim" version):
 bindsym $mod+j focus down
@@ -110,6 +103,10 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+
+# for screenshot
+bindsym Print exec grim ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d-%H%M%S').png
+bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d-%H%M%S').png
 
 # Hold the modifier key and hold the left/right mouse button
 # to drag or resize a window respectively. This isn't exclusive
@@ -180,8 +177,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+b splitv
+bindsym $mod+v splith
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
@@ -220,12 +217,13 @@ bindsym $mod+shift+escape      mode $power_mode
 mode $power_mode {
     bindsym p         exec shutdown now
     bindsym r         exec shutdown -r now
-    bindsym l         exec swaylock -i $HOME/.config/sway/wallpaper.png , mode "default"
+    bindsym l         exec $lock_screen
     bindsym q         exec --no-startup-id i3-msg exit, mode "default"
     bindsym h         exec systemctl hibernate
     #bindsym s        exec sudo  /lib/systemd/systemd-sleep hybrid-sleep 
     # bindsym s         exec systemctl suspend, mode "default"
-    bindsym s         exec swaylock -i $HOME/.config/sway/wallpaper.png , mode "default"
+    # bindsym s         exec swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png , mode "default"
+    bindsym s         exec $lock_screen
     bindsym return    mode "default"
     bindsym escape    mode "default"
 }
@@ -270,10 +268,12 @@ bindsym $mod+shift+b exec firefox -P %u
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
 bindsym ctrl+$mod+f exec nautilus
+bindsym ctrl+$mod+b exec blueman-manager
 
 # Open a terminal emulator:
 set $term alacritty
 bindsym $mod+t exec $term
+bindsym $mod+Return exec $term
 
 # Kill focused window:
 bindsym $mod+Shift+q kill
@@ -284,9 +284,26 @@ bindsym $mod+space exec $menu
 # Open the application launcher (alternate version):
 bindsym $mod+d exec $menu
 
+exec swayidle -w \
+	before-sleep 'swaylock -i $HOME/.config/sway/wallpaper.png --debug'
+	# before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
+	# lock 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.jpg' 
+
 #======#
 # Misc #
 #======#
+
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
-exec --no-startup-id gnome-keyring-daemon --start --components=secrets
+
+# Screen locking (automatic, with a timeout)
+# set $lock swaylock
+# exec swayidle -w \
+#     timeout 10 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png' \
+#     timeout 7 'swaymsg "output * dpms off"' \
+#     resume 'swaymsg "output * dpms on"' \
+#     before-sleep 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png'
+
+# exec ./sleep.sh
+
+

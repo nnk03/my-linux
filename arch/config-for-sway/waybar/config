@@ -26,11 +26,11 @@
     // Choose the order of the modules
     "modules-center": ["sway/workspaces"],
     "modules-left": ["custom/hostname", "sway/mode", "sway/scratchpad"],
-    "modules-right": [ "custom/audio","network","cpu","memory","temperature", "backlight", "battery","clock"],
+    "modules-right": [ "custom/audio", "bluetooth", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock"],
 
     // Configuration for individual modules
     "backlight": {
-        "format": "{percent}%   {icon}",
+        "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
@@ -73,9 +73,9 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "{icon}     {capacity}%",
-        "format-charging": "⚡ {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ⚡",
+        "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -84,7 +84,7 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "     {signalStrength}%",
+        "format-wifi": "{signalStrength}% ",
         "format-ethernet": "Connected  ",
         "tooltip-format": "{ifname}: {gwaddr}",
         "format-linked": "{ifname} (No IP)",
