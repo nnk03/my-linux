@@ -1,6 +1,12 @@
-# Needed packages for ubuntu
+# Needed packages 
 
 1. brightnessctl, pavucontrol ?
+
+1. need the packages `grim` and `slurp` to take screenshots
+
+```
+sudo apt install grim slurp
+```
 
 # Needed packages for arch
 
