@@ -84,6 +84,12 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. neovim in arch, bufferline plugin was showing an error, so use cokeline plugin [https://github.com/willothy/nvim-cokeline](https://github.com/willothy/nvim-cokeline)
 
+1. [https://bbs.archlinux.org/viewtopic.php?id=283316](https://bbs.archlinux.org/viewtopic.php?id=283316) if fonts not rendering properly in arch linux
+   Run the below command and reload the page, might work
+   ```
+   sudo pacman -Ss icon
+   ```
+
 ### For installing the whole OS in a pendrive
 
 1. [https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s](https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s) For Ubuntu
