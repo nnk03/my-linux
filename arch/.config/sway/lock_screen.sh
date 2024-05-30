@@ -17,7 +17,7 @@ swayidle -w \
     resume 'swaymsg "output * dpms on"' &
 
 # Locks the screen immediately
-swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png -c 550000
+swaylock -i $HOME/.config/sway/wallpaper.png -c 550000
 
 # Kills last background task so idle timer doesn't keep running
 kill %%

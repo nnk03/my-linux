@@ -212,21 +212,21 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # for shutting down and suspending the system
-set $power_mode "power"
-bindsym $mod+shift+escape      mode $power_mode
-mode $power_mode {
-    bindsym p         exec shutdown now
-    bindsym r         exec shutdown -r now
-    bindsym l         exec $lock_screen
-    bindsym q         exec --no-startup-id i3-msg exit, mode "default"
-    bindsym h         exec systemctl hibernate
-    #bindsym s        exec sudo  /lib/systemd/systemd-sleep hybrid-sleep 
+# set $power_mode "power"
+# bindsym $mod+shift+escape      mode $power_mode
+# mode $power_mode {
+    # bindsym p         exec shutdown now
+    # bindsym r         exec shutdown -r now
+    # bindsym l         exec $lock_screen
+    # bindsym q         exec --no-startup-id i3-msg exit, mode "default"
+    # bindsym h         exec systemctl hibernate
+    # bindsym s        exec sudo  /lib/systemd/systemd-sleep hybrid-sleep 
     # bindsym s         exec systemctl suspend, mode "default"
     # bindsym s         exec swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png , mode "default"
-    bindsym s         exec $lock_screen
-    bindsym return    mode "default"
-    bindsym escape    mode "default"
-}
+    # bindsym s         exec $lock_screen
+    # bindsym return    mode "default"
+    # bindsym escape    mode "default"
+# }
 
 #===============================#
 # Keyboard Shortcuts (Hardware) #
