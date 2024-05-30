@@ -65,6 +65,10 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. for using clipboard in vim in sway session, install wl-clipboard using the below command
 
+1. if wayland didn't work as expected, remove trailing commas in configuration files and reboot
+
+1. if on using sway, the applications are opening in light mode, switch back to gnome and using gnome-tweaks, change settings of appearance to Adwaita and Adwaita Dark
+
 ```
 sudo apt install wl-clipboard
 ```
