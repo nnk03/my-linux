@@ -80,14 +80,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. tmux first line is not necessary ?
 
-1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F` 
+1. for night owl, theme in gnome-terminal, replace `fgrep` with `grep -F`
 
-
-
-
-
-
-   
+1. neovim in arch, bufferline plugin was showing an error, so use cokeline plugin [https://github.com/willothy/nvim-cokeline](https://github.com/willothy/nvim-cokeline)
 
 ### For installing the whole OS in a pendrive
 
@@ -96,14 +91,3 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. [https://www.youtube.com/watch?v=\_5vv3j-dW4o](https://www.youtube.com/watch?v=_5vv3j-dW4o) For Debian
 
 1. [https://www.youtube.com/watch?v=yYyh3PrIB7w](https://www.youtube.com/watch?v=yYyh3PrIB7w) For Arch
-
-
-
-
-
-
-
-
-
-
-

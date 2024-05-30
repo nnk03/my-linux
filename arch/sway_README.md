@@ -1,4 +1,4 @@
-# Needed packages 
+# Needed packages
 
 1. brightnessctl, pavucontrol ?
 
@@ -15,3 +15,6 @@ sudo apt install grim slurp
 1. Charging and plugged-in icon not refreshing automatically
 
 1. refer this website [https://wiki.archlinux.org/title/GNOME/Keyring](https://wiki.archlinux.org/title/GNOME/Keyring)
+
+1. [https://www.osside.net/2023/07/02/how-to-enable-wayland-on-arch-linux-nvidia-rtx-gpu/](https://www.osside.net/2023/07/02/how-to-enable-wayland-on-arch-linux-nvidia-rtx-gpu/)
+   refer this to know how to enable wayland sessions if nvidia gpu is present

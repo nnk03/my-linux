@@ -35,6 +35,24 @@ set smartindent         " even better autoindent (e.g. add indent after '{')
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+" for enabling clipboard support in sway session
+if has('clipboard')
+    set clipboard=unnamedplus
+    let g:clipboard = {
+        \   'name': 'wl-clipboard',
+        \   'copy': {
+        \      '+': 'wl-copy --foreground --type text/plain',
+        \      '*': 'wl-copy --foreground --type text/plain',
+        \    },
+        \   'paste': {
+        \      '+': 'wl-paste --no-newline',
+        \      '*': 'wl-paste --no-newline',
+        \   },
+        \   'cache_enabled': 1,
+        \ }
+endif
+
+
 
 " set cursorline "highlight current line
 
