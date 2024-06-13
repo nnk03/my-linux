@@ -86,9 +86,12 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. [https://bbs.archlinux.org/viewtopic.php?id=283316](https://bbs.archlinux.org/viewtopic.php?id=283316) if fonts not rendering properly in arch linux
    Run the below command and reload the page, might work
+
    ```
    sudo pacman -Ss icon
    ```
+
+1. install `wl-clipboard` to use clipboard in arch alongside vim and neovim
 
 ### For installing the whole OS in a pendrive
 
