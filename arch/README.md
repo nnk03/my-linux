@@ -93,6 +93,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. install `wl-clipboard` to use clipboard in arch alongside vim and neovim
 
+1. Install `calc` - terminal calculator
+
 ### For installing the whole OS in a pendrive
 
 1. [https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s](https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s) For Ubuntu
