@@ -95,6 +95,9 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. Install `calc` - terminal calculator
 
+1. `mako` is a notification daemon for wayland compositors, config file is in ~/.config/mako/config, after changing config, run `makoctl reload`\
+   don't forget to add the line `exec mako` at the end of sway config
+
 ### For installing the whole OS in a pendrive
 
 1. [https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s](https://www.youtube.com/watch?v=j2RYqahtkNc&t=43s) For Ubuntu

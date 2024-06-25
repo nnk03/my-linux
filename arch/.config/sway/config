@@ -310,4 +310,5 @@ include /etc/sway/config.d/*
 
 # exec ./sleep.sh
 
+exec mako
 

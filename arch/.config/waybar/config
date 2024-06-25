@@ -80,6 +80,8 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""],
+		"exec": "~/.config/waybar/check_battery.sh",
+		"interval":60,
     },
 
     "network": {
