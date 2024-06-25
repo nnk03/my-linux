@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THRESHOLD=20  # Set your low battery threshold percentage
+THRESHOLD=80  # Set your low battery threshold percentage
 
 # Get the battery percentage
 BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')

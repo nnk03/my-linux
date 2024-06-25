@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THRESHOLD=12  # Set your low battery threshold percentage
+THRESHOLD=80  # Set your low battery threshold percentage
 
 # Get the battery percentage
 BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
@@ -14,5 +14,5 @@ if [ "$STATUS" == "Discharging" ] && [ "$BATTERY_LEVEL" -le "$THRESHOLD" ]; then
 fi
 
 # Output battery level for Waybar display
-echo "Battery: ${BATTERY_LEVEL}%"
+# echo "Battery: ${BATTERY_LEVEL}%"
 
