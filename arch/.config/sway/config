@@ -161,6 +161,11 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 
+# cycling through workspaces, reason for `p` to be next and `n` to be previous
+# is that it is similar to `h` and `l`
+bindsym $mod+p workspace next
+bindsym $mod+n workspace prev
+
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
