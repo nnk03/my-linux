@@ -270,6 +270,7 @@ set $menu wofi --show drun  -i | xargs swaymsg exec --
 # to ask for profile each time new window opens
 bindsym $mod+shift+b exec firefox -P %u
 bindsym $mod+shift+p exec firefox --private-window
+bindsym $mod+shift+g exec google-chrome-stable
 
 # chrome password manager not autofilling, for some reason
 # bindsym $mod+shift+b exec firefox-developer-edition -P %u
@@ -316,4 +317,7 @@ include /etc/sway/config.d/*
 # exec ./sleep.sh
 
 exec mako
+exec pipewire
+exec wireplumber
+exec xdg-desktop-portal-wlr
 
