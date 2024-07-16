@@ -34,6 +34,9 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- select all
 keymap.set("n", "<leader>a", "ggVG", { desc = "Select all in Visual Block" }) -- select all IN VISUAL BLOCK
 
+-- exit all :qa
+keymap.set("n", "<leader>ka", "<cmd>:qa<CR>", { desc = "Quit all" })
+
 -- custom keybindings
 vim.keymap.set("n", "<leader>w", "<Esc>:w<CR>")
 vim.keymap.set("n", "<leader>q", "<Esc>:q<CR>")
