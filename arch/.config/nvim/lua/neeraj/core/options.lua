@@ -5,10 +5,12 @@ opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
-opt.shiftwidth = 4 -- 4 spaces for indent width
-opt.expandtab = false -- expand tab to spaces
+opt.tabstop = 2 -- 4 spaces for tabs (prettier default)
+opt.softtabstop = 2
+opt.shiftwidth = 2 -- 4 spaces for indent width
+opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
+opt.smartindent = true
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
