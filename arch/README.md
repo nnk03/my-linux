@@ -71,6 +71,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. xclip was required to use system clipboard for neovim
 
+1. Install linters ruff ( for python ) and clang-format (might be available when clang is installed) for c/c++
+
 ## For Arch Linux
 
 1. Check whichever is required, which are mentioned for Ubuntu
