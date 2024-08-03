@@ -65,6 +65,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. Install pylint and use the pylintrc in the arch directory
 
+1. install clang to use clang-format for formatting c/cpp files. for in place edit use `clang-format -i`
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
