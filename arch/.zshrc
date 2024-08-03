@@ -11,6 +11,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# for screensharing
+export MOZ_ENABLE_WAYLAND=1
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -93,6 +96,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt inc_append_history
 unsetopt share_history
 
+export EDITOR='vim'
+export VISUAL='vim'
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -122,7 +128,14 @@ unsetopt share_history
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# for screensharing
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
+export SDL_VIDEODRIVER=wayland
+
 bindkey '^ ' autosuggest-accept
+bindkey '^o' clear-screen
 
 alias tmux='tmux -u'
 alias v='nvim'
@@ -136,15 +149,11 @@ export PATH="$HOME/alacritty/target/release:$PATH"
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
+# for arch
+eval "$(zoxide init zsh)"
 # alias cd="z"		# better to use cd and z separately
 
 # source /home/neeraj/anaconda3/bin/activate base
 # conda deactivate
-
-
-
-
-
-
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
