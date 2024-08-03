@@ -63,6 +63,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. docker
 
+1. Install pylint and use the pylintrc in the arch directory
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
