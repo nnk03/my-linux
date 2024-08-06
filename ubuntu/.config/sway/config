@@ -267,7 +267,7 @@ bindsym $mod+shift+b exec firefox -P %u
 
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
-bindsym ctrl+$mod+f exec nautilus
+bindsym ctrl+$mod+f exec GTK_THEME=Adwaita-dark nautilus
 bindsym ctrl+$mod+b exec blueman-manager
 
 # Open a terminal emulator:
@@ -305,5 +305,4 @@ include /etc/sway/config.d/*
 #     before-sleep 'swaylock -i $HOME/.config/sway/ubuntu_wallpaper.png'
 
 # exec ./sleep.sh
-
 
