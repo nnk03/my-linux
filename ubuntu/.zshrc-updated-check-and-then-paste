@@ -141,6 +141,7 @@ bindkey '^ ' autosuggest-accept
 bindkey '^o' clear-screen
 
 alias tmux='tmux -u'
+alias nautilus='GTK_THEME=Adwaita-dark nautilus'
 
 export PATH="$HOME/nvim-linux64/bin/./:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
