@@ -74,6 +74,8 @@ bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 set $lock_screen exec bash ~/.config/sway/lock_screen.sh
 # bindsym $mod+Escape $lock_screen
 bindsym Ctrl+Alt+q $lock_screen
+bindsym Ctrl+Alt+p exec shutdown now
+bindsym Ctrl+Alt+r exec reboot
 
 
 #========================================#
