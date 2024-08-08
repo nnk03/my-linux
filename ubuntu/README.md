@@ -73,6 +73,29 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 sudo apt install wl-clipboard
 ```
 
+1. READ [SWAY README](./sway_README.md)
+
+1. **IMPORTANT** SCREENSHARING IN SWAY WINDOW MANAGER
+
+[https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/4](https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/4)
+
+[https://soyuka.me/make-screen-sharing-wayland-sway-work/](https://soyuka.me/make-screen-sharing-wayland-sway-work/)
+
+TL;DR \\
+Install `xdg-desktop-portal-wlr` and `xdg-desktop-portal` (`mako`, `wdisplays` not sure)
+
+In the file `/etc/sway/config.d/50-systemd-user.conf`, we should have something similar like the below
+
+```
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
+```
+
+And then restart the computer
+
+Follow the points, mentioned here [https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/5](https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/5)
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
