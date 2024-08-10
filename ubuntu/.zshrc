@@ -136,7 +136,8 @@ export PATH="$HOME/alacritty/target/release:$PATH"
 
 
 # ---- Eza (better ls) -----
-alias ls="eza --icons=always"
+# alias ls="eza --icons=always"
+alias els="eza --icons=always"
 # ---- Zoxide (better cd) ----
 # alias cd="z"		# better to use cd and z separately
 
