@@ -17,3 +17,9 @@ vim.cmd([[
     autocmd BufWritePost *.tex :silent !pdflatex %:t
   augroup END
 ]])
+
+-- to apply clang-format when saving cpp files
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.cpp", "*.c", "*.h" },
+  command = "silent ! clang-format -i %",
+})
