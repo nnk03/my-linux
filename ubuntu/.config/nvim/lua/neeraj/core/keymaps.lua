@@ -83,3 +83,8 @@ vim.keymap.set(
   "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>",
   { desc = "Remove current file from buffer without closing window " }
 )
+
+-- Oil.nvim
+vim.keymap.set("n", "<leader>pd", "<Esc>:Oil<CR>", {
+  desc = "Open parent directory",
+})
