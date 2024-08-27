@@ -23,3 +23,9 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "*.cpp", "*.c", "*.h" },
   command = "silent ! clang-format -i %",
 })
+
+-- to apply black formatting when saving python files
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.py" },
+  command = "silent ! black %",
+})

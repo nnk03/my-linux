@@ -76,6 +76,16 @@ return {
       on_attach = on_attach,
     })
 
+    -- enable matlab
+    lspconfig.matlab_ls.setup({
+      cmd = { "matlab-language-server", "--stdio" },
+      filetypes = { "matlab" },
+      root_dir = lspconfig.util.root_pattern(".git", "Makefile", "*.prj"),
+      settings = {},
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure html server
     lspconfig["html"].setup({
       capabilities = capabilities,
@@ -84,6 +94,19 @@ return {
 
     -- configure typescript server with plugin
     lspconfig["tsserver"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- enable rust
+    lspconfig.rust_analyzer.setup({
+      settings = {
+        ["rust-analyzer"] = {
+          diagnostics = {
+            enable = false,
+          },
+        },
+      },
       capabilities = capabilities,
       on_attach = on_attach,
     })
