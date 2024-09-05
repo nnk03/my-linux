@@ -14,6 +14,16 @@ sudo chmod u+s $(which brightnessctl)
 sudo apt install grim slurp
 ```
 
+1. Using sway might cause matplotlib not to show figures
+
+So, install `pyqt5` package
+and add the below lines to files which use plot to show
+
+```
+import matplotlib
+matplotlib.use('Qt5Agg')  # Use the Qt5 backend for compatibility with Wayland
+```
+
 # Needed packages for arch
 
 1. install pavucontrol, brightnessctl, gnome-keyring
