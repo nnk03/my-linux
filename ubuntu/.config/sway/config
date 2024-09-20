@@ -39,7 +39,7 @@ gaps outer 3
 # hide_edge_borders both
 
 # Configure the default border:
-default_border pixel 2
+default_border pixel 5
 
 # Set the Wallpaper:
 output * bg $HOME/.config/sway/ubuntu_wallpaper.png fill
@@ -271,7 +271,7 @@ bindsym $mod+shift+p exec GTK_THEME=Adwaita-dark google-chrome --new-window --in
 
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
-bindsym ctrl+$mod+f exec GTK_THEME=Adwaita-dark nautilus
+bindsym ctrl+$mod+f exec GTK_THEME=Adwaita-dark GDK_BACKEND=x11 nautilus
 bindsym ctrl+$mod+b exec blueman-manager
 
 # Open a terminal emulator:
