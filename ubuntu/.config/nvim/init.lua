@@ -18,9 +18,9 @@ vim.cmd([[
   augroup END
 ]])
 
--- to apply clang-format when saving cpp files
+-- to apply clang-format when saving cpp files and arduino files
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "*.cpp", "*.c", "*.h" },
+  pattern = { "*.cpp", "*.c", "*.h", "*.ino" },
   command = "silent ! clang-format -i %",
 })
 
