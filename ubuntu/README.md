@@ -96,6 +96,15 @@ And then restart the computer
 
 Follow the points, mentioned here [https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/5](https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/5)
 
+1. if using dual boot, then windows time and ubuntu time might be out of sync. [blog](https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/)
+   Make windows use automatic time sync and then check the below screenshot
+
+![Screenshot](./screenshot-2024-09-27-160353.png)
+
+```
+timedatectl set-local-rtc 1 --adjust-system-clock
+```
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
