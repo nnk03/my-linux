@@ -24,6 +24,21 @@ import matplotlib
 matplotlib.use('Qt5Agg')  # Use the Qt5 backend for compatibility with Wayland
 ```
 
+1. For using matlab in sway window manager
+   [Reddit Discussion](https://www.reddit.com/r/matlab/comments/1dhejp5/matlab_gui_not_loading_properly_on_arch/)
+
+```
+sudo apt install wmname
+```
+
+or
+
+```
+sudo apt install suckless-tools
+```
+
+Run `wmname compiz` before launching matlab
+
 # Needed packages for arch
 
 1. install pavucontrol, brightnessctl, gnome-keyring
