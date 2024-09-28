@@ -24,6 +24,22 @@ import matplotlib
 matplotlib.use('Qt5Agg')  # Use the Qt5 backend for compatibility with Wayland
 ```
 
+or the below solution might work\
+Problem with matplotlib plot rendering in sway window manager
+
+Try these
+
+```
+sudo apt install qtwayland5
+```
+
+if the file to be run is `test.py`\
+Run it with
+
+```
+QT_QPA_PLATFORM=xcb python3 test.py
+```
+
 1. For using matlab in sway window manager
    [Reddit Discussion](https://www.reddit.com/r/matlab/comments/1dhejp5/matlab_gui_not_loading_properly_on_arch/)
 
