@@ -24,6 +24,12 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "silent ! clang-format -i %",
 })
 
+-- to apply rustfmt when saving rust file
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.rs" },
+  command = "silent ! rustfmt %",
+})
+
 -- to apply black formatting when saving python files
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "*.py" },
