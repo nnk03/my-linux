@@ -10,6 +10,11 @@ vim.cmd([[
   autocmd FileType javascript setlocal noexpandtab
 ]])
 
+-- for shell scripts, do not expand tab
+vim.cmd([[
+  autocmd FileType sh setlocal noexpandtab
+]])
+
 -- Automatically build and compile LaTeX files on save
 vim.cmd([[
   augroup LaTeXAutoCompile
@@ -17,6 +22,12 @@ vim.cmd([[
     autocmd BufWritePost *.tex :silent !pdflatex %:t
   augroup END
 ]])
+
+-- to apply shfmt for shell script files
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.sh" },
+  command = "silent ! shfmt -w %",
+})
 
 -- to apply clang-format when saving cpp files and arduino files
 vim.api.nvim_create_autocmd("BufWritePost", {
