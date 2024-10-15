@@ -55,6 +55,61 @@ sudo apt install suckless-tools
 
 Run `wmname compiz` before launching matlab
 
+1. For notifying user of low battery alert, install `mako`
+
+then add these to systemd services?
+
+`/etc/systemd/system/low_battery.service`
+
+```
+[Unit]
+Description=Low Battery Notification Script
+
+[Service]
+ExecStart=/home/neeraj/.config/waybar/low_battery.sh
+Environment="DISPLAY=:0"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
+User=neeraj
+```
+
+`/etc/systemd/system/low_battery.timer`
+
+```
+[Unit]
+Description=Run Low Battery Script Every 2 Minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+AccuracySec=1ms
+
+[Install]
+WantedBy=timers.target
+```
+
+Then Run the below
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart low_battery.service
+sudo systemctl restart low_battery.timer
+
+```
+
+Run the below to check status
+
+```sh
+systemctl status low_battery.service
+
+```
+
+To check logs, run the below
+
+```sh
+journalctl -u low_battery.service
+
+```
+
 # Needed packages for arch
 
 1. install pavucontrol, brightnessctl, gnome-keyring
