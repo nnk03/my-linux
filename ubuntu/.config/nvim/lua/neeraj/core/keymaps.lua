@@ -88,3 +88,8 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>pd", "<Esc>:Oil<CR>", {
   desc = "Open parent directory",
 })
+
+-- markdown-preview.nvim
+vim.keymap.set("n", "<leader>pmt", "<Esc>:MarkdownPreviewToggle<CR>", {
+  desc = "Toggle Markdown Preview",
+})
