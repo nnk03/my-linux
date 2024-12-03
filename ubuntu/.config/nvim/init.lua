@@ -46,3 +46,5 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "*.py" },
   command = "silent ! black %",
 })
+
+-- vim.g.mkdp_echo_preview_url = 1
