@@ -105,6 +105,8 @@ Follow the points, mentioned here [https://forum.endeavouros.com/t/unable-to-sha
 timedatectl set-local-rtc 1 --adjust-system-clock
 ```
 
+1. check out [sudo-password-caching-time](./time-caching-for-sudo.md)
+
 ## For Kali Linux
 
 1. only homebrew, vim, vimrc, gcc, vscode
