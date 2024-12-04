@@ -47,4 +47,12 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "silent ! black %",
 })
 
+-- to enable the plugin automatically when opening markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    require("render-markdown").enable()
+  end,
+})
+
 -- vim.g.mkdp_echo_preview_url = 1
