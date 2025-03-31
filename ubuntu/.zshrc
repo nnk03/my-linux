@@ -8,11 +8,11 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
@@ -93,6 +93,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt inc_append_history
 unsetopt share_history
 
+export EDITOR='vim'
+export VISUAL='vim'
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -108,48 +111,93 @@ unsetopt share_history
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# for screensharing
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
+export SDL_VIDEODRIVER=wayland
 
 bindkey '^ ' autosuggest-accept
+bindkey '^o' clear-screen
 
 alias tmux='tmux -u'
-alias v='nvim'
-
+alias nautilus='GTK_THEME=Adwaita-dark GDK_BACKEND=x11 nautilus'
+alias matplotlib-python3='QT_QPA_PLATFORM=xcb python3'
+alias arduinoApp='~/.arduino-application-image/AppRun'
+alias matlabApp='wmname compiz && /usr/local/bin/matlab'
+alias godotApp='$HOME/.godotAppRun/Godot_v4.3-stable_linux.x86_64'
+alias notify-send='canberra-gtk-play -f $HOME/.config/mako/notification-sound.wav && /usr/bin/notify-send'
 
 export PATH="$HOME/nvim-linux64/bin/./:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/alacritty/target/release:$PATH"
+# export PATH="$HOME/.alacritty/target/release:$PATH"
+# alacritty can be installed using sudo apt in ubuntu 24.04
 
 
 # ---- Eza (better ls) -----
-# alias ls="eza --icons=always"
-alias els="eza --icons=always"
+alias els="/usr/bin/ls"
+alias ls="eza --icons=always"
+# alias els="eza --icons=always"
+
 # ---- Zoxide (better cd) ----
+# for arch
+eval "$(zoxide init zsh)"
 # alias cd="z"		# better to use cd and z separately
+
 
 # source /home/neeraj/anaconda3/bin/activate base
 # conda deactivate
 
+# Created by `pipx` on 2024-08-07 12:04:55
+export PATH="$PATH:/home/neeraj/.local/bin"
+
+
+# For CUDA
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# For Go
+export PATH=$PATH:/usr/local/go/bin
 
 
 
+source $HOME/.venv/bin/activate
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# for networkx directory alone 
+if [[ $(pwd) == "$HOME/btp/networkx"* ]]; then
+   source "$HOME/btp/networkx/networkx-dev/bin/activate"
+fi
 
+if [[ $(pwd) == "$HOME/Desktop/learning/ml/kaggle-titanic"* ]]; then
+   source "$HOME/Desktop/learning/ml/kaggle-titanic/.kaggle/bin/activate"
+fi
 
-eval "$(zoxide init zsh)"
+export GUROBI_HOME="/opt/gurobi/linux64"
+export PATH="${GUROBI_HOME}/bin:$PATH"
+export LD_LIBRARY_PATH="${GUROBI_HOME}/lib:$LD_LIBRARY_PATH"
+export GRB_LICENSE_FILE="$HOME/gurobi.lic"
 
+alias gcc-11='gcc'
+alias cmake='/home/neeraj/.cmake-4.0.0/bin/cmake'
+alias ctest='/home/neeraj/.cmake-4.0.0/bin/ctest'
+alias cpack='/home/neeraj/.cmake-4.0.0/bin/cpack'
