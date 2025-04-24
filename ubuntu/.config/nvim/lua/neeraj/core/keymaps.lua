@@ -34,6 +34,14 @@ vim.keymap.set("n", "<leader>;", function()
   end
 end, { desc = "Add semicolon at end of line (if not present)" })
 
+-- Add comma at the end
+vim.keymap.set("n", "<leader>,", function()
+  local line = vim.api.nvim_get_current_line()
+  if not line:match(",%s*$") then
+    vim.api.nvim_set_current_line(line .. ",")
+  end
+end, { desc = "Add comma at end of line (if not present)" })
+
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
