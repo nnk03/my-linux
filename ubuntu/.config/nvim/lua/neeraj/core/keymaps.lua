@@ -26,7 +26,13 @@ keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- 
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 -- Add semicolon at the end
-keymap.set("n", "<leader>;", "<Esc>A;<Esc>", { desc = "Add semicolon at the end of the current line" })
+-- keymap.set("n", "<leader>;", "<Esc>A;<Esc>", { desc = "Add semicolon at the end of the current line" })
+vim.keymap.set("n", "<leader>;", function()
+  local line = vim.api.nvim_get_current_line()
+  if not line:match(";%s*$") then
+    vim.api.nvim_set_current_line(line .. ";")
+  end
+end, { desc = "Add semicolon at end of line (if not present)" })
 
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
