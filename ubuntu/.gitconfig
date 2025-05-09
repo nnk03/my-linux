@@ -5,3 +5,6 @@
 	defaultBranch = main
 [alias]
 	st = status
+[core]
+	editor = /home/neeraj/nvim-linux64/bin/.//nvim
+
