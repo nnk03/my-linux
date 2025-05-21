@@ -1,8 +1,20 @@
 return {
+  -- "williamboman/mason.nvim",
+  -- dependencies = {
+  --   "williamboman/mason-lspconfig.nvim",
+  --   "jayp0521/mason-null-ls.nvim",
+  -- },
   "williamboman/mason.nvim",
+  version = "^1.8.0", -- or latest
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
-    "jayp0521/mason-null-ls.nvim",
+    {
+      "williamboman/mason-lspconfig.nvim",
+      version = "^1.29.0", -- this version avoids the `.enable()` call
+    },
+    {
+      "jayp0521/mason-null-ls.nvim",
+      version = "^2.1.0", -- or latest compatible
+    },
   },
   config = function()
     -- import mason
