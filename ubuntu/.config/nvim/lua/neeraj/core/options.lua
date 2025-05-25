@@ -3,17 +3,23 @@ local opt = vim.opt -- for conciseness
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+-- vim.cmd("set rnu")
+-- vim.cmd("set nu")
 
 -- tabs & indentation
-opt.tabstop = 3 -- 4 spaces for tabs (prettier default)
+opt.tabstop = 3
 opt.softtabstop = 3
-opt.shiftwidth = 3 -- 4 spaces for indent width
+opt.shiftwidth = 3 -- 3 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.smartindent = true
+-- vim.cmd("set expandtab")
+-- vim.cmd("set tabstop=3")
+-- vim.cmd("set softtabstop=3")
+-- vim.cmd("set shiftwidth=3")
 
 -- line wrapping
-opt.wrap = false -- disable line wrapping
+opt.wrap = true -- disable/enable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
