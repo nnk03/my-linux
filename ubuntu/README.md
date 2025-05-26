@@ -50,6 +50,10 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 1. `eza` - Better `ls` and `zoxide` - Better `cd`
    [https://www.josean.com/posts/how-to-setup-alacritty-terminal](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
 
+1. `yazi` install using homebrew
+
+1. `kitty` terminal emulator install using homebrew
+
 1. alacritty might be necessary for using sway, - [https://github.com/alacritty/alacritty/tree/master][https://github.com/alacritty/alacritty/tree/master]
    installation of alacritty for ubuntu can be found in the above link,
 
