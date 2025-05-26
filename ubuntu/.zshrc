@@ -148,7 +148,7 @@ alias matlabApp='wmname compiz && /usr/local/bin/matlab'
 alias godotApp='$HOME/.godotAppRun/Godot_v4.3-stable_linux.x86_64'
 alias notify-send='canberra-gtk-play -f $HOME/.config/mako/notification-sound.wav && /usr/bin/notify-send'
 
-export PATH="$HOME/nvim-linux64/bin/./:$PATH"
+export PATH="$HOME/.nvim-linux-x86_64/bin/./:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 # export PATH="$HOME/.alacritty/target/release:$PATH"
 # alacritty can be installed using sudo apt in ubuntu 24.04
@@ -201,3 +201,12 @@ alias gcc-11='gcc'
 alias cmake='/home/neeraj/.cmake-4.0.0/bin/cmake'
 alias ctest='/home/neeraj/.cmake-4.0.0/bin/ctest'
 alias cpack='/home/neeraj/.cmake-4.0.0/bin/cpack'
+
+# for yazi
+# function y() {
+# 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+# 	yazi "$@" --cwd-file="$tmp"
+# 	IFS= read -r -d '' cwd < "$tmp"
+# 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+# 	rm -f -- "$tmp"
+# }
