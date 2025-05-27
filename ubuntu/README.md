@@ -59,6 +59,8 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. rustup for alacritty and cargo ?
 
+1. maybe setup gnu-stow
+
 1. [https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s](https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s)
 
 1. postgres and pgAdmin
