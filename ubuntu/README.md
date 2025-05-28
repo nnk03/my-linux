@@ -1,5 +1,17 @@
 # my-linux
 
+```
+.clang-format
+.pylintrc
+.gitconfig
+.tmux.conf
+.vimrc
+.zshrc
+
+
+all have been moved to my-dotfiles repo and is managed by gnu-stow
+```
+
 UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. necessary nvidia drivers
@@ -16,7 +28,7 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. Latex, python, anaconda, jupyter notebook (comes with anaconda ?? ) , texworks
 
-1. install npm, node, javacript, python
+1. install npm, node, javascript, python
 
 1. neovim (with icon packs and themes)
 
@@ -59,7 +71,11 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. rustup for alacritty and cargo ?
 
-1. maybe setup gnu-stow
+1. setup gnu-stow
+
+1. brew install bat `better cat??`
+
+1. apt install fzf
 
 1. [https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s](https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s)
 
