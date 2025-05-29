@@ -10,6 +10,8 @@ packages=(
 	lazygit
 	lazydocker
 	# nvim
+	fzf
+	eza
 )
 
 echo "Updating Homebrew..."

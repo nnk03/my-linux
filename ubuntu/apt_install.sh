@@ -11,7 +11,6 @@ packages=(
 	zsh
 	xclip
 	wl-clipboard
-	eza
 	zoxide
 	kitty
 )
