@@ -9,6 +9,7 @@ packages=(
 	bat
 	lazygit
 	lazydocker
+	# nvim
 )
 
 echo "Updating Homebrew..."

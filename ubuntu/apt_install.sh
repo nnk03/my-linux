@@ -5,6 +5,7 @@ packages=(
 	build-essential
 	vim
 	git
+	curl
 	vim-gtk3
 	stow
 	zsh

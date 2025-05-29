@@ -75,7 +75,7 @@ UBUNTU -> need to install fonts (mesloNerd and ...)
 
 1. brew install bat `better cat??`
 
-1. apt install fzf
+1. brew install fzf
 
 1. [https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s](https://www.youtube.com/watch?v=sdSFzZCgWp0&t=83s)
 
