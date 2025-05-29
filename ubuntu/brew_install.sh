@@ -7,6 +7,8 @@ packages=(
 	python
 	yazi
 	bat
+	lazygit
+	lazydocker
 )
 
 echo "Updating Homebrew..."
