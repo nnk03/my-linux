@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ERROR_LOG="install_errors.log"
+>"$ERROR_LOG" # Clear the file at the beginning
+
 echo "Installing Packages using APT"
 source ./apt_install.sh
 echo "Finished Installing using APT"

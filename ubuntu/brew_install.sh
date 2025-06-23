@@ -23,7 +23,12 @@ for pkg in "${packages[@]}"; do
 		echo "$pkg is already installed."
 	else
 		echo "Installing $pkg..."
-		brew install "$pkg"
+		if brew install "$pkg"; then
+			echo "$pkg installed successfully."
+		else
+			echo "BREW_PACKAGE - $pkg" >>"$ERROR_LOG"
+			echo "Failed to install $pkg. Logged to $ERROR_LOG"
+		fi
 	fi
 done
 

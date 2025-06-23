@@ -13,10 +13,8 @@ packages=(
 	wl-clipboard
 	zoxide
 	kitty
+	ripgrep
 )
-
-# Check for the below things
-# Latex
 
 echo "Updating package lists..."
 sudo apt update
@@ -30,7 +28,12 @@ for pkg in "${packages[@]}"; do
 		echo "$pkg is already installed."
 	else
 		echo "Installing $pkg..."
-		sudo apt install -y "$pkg"
+		if sudo apt install -y "$pkg"; then
+			echo "$pkg installed successfully."
+		else
+			echo "APT_PACKAGE - $pkg" >>"$ERROR_LOG"
+			echo "Failed to install $pkg. Logged to $ERROR_LOG"
+		fi
 	fi
 done
 
